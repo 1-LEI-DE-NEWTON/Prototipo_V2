@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zqoNKukdIN4=",
+  "dgSpecHash": "R21PVEtz2z4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programação\\Códigos\\ProtótipoV1\\BackEnd-NET6\\BackEnd-NET6.csproj",
+  "projectFilePath": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programação\\Códigos\\Prototipo_V2\\BackEnd-NET6\\BackEnd-NET6.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dell\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",

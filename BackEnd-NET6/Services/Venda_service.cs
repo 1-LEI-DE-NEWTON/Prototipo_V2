@@ -2,6 +2,7 @@
 using BackEnd_NET6.Models;
 using BackEnd_NET6.Models.DTOs;
 using BackEnd_NET6.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace BackEnd_NET6.Services
 {
@@ -37,6 +38,24 @@ namespace BackEnd_NET6.Services
                 PlanoId = vendaDTO.PlanoId
             };
 
+            //Adiciona vendastatus
+            var vendaStatus = new VendaStatus
+            {
+                Status = "Na fila",
+                Mensagem = "Venda aguardando processamento",
+                StatusCadastroCliente = "Pendente",
+                StatusValidacaoCpf = "Pendente",
+                StatusCpfJaCliente = "Pendente",
+                StatusCadastroVenda = "Pendente",
+                ValidacaoIccid = "Pendente",
+                DataAtualizacao = DateTime.Now
+            };
+
+            venda.Status = new List<VendaStatus>
+            {
+                vendaStatus
+            };                                    
+
             try 
             {
                 _context.Vendas.Add(venda);
@@ -53,7 +72,44 @@ namespace BackEnd_NET6.Services
         {
             try
             {
-                return _context.Vendas.ToList();
+                return _context.Vendas
+                .Include(v => v.Status)
+                .Select(v => new Venda
+                {
+                    Id = v.Id,
+                    NomeCliente = v.NomeCliente,
+                    Email = v.Email,
+                    Telefone = v.Telefone,
+                    IsWhatsApp = v.IsWhatsApp,
+                    CPF = v.CPF,
+                    RG = v.RG,
+                    DataNascimento = v.DataNascimento,
+                    CEP = v.CEP,
+                    Endereco = v.Endereco,
+                    Numero = v.Numero,
+                    Complemento = v.Complemento,
+                    DataVencimento = v.DataVencimento,
+                    DataVenda = v.DataVenda,
+                    Pdv = v.Pdv,
+                    IccidInicial = v.IccidInicial,
+                    VendedorId = v.VendedorId,
+                    Vendedor = v.Vendedor,
+                    Plano = v.Plano,                    
+                    PlanoId = v.PlanoId,
+                    Status = v.Status.Select(s => new VendaStatus
+                    {
+                        Id = s.Id,
+                        Mensagem = s.Mensagem,
+                        StatusCadastroCliente = s.StatusCadastroCliente,
+                        StatusValidacaoCpf = s.StatusValidacaoCpf,
+                        StatusCpfJaCliente = s.StatusCpfJaCliente,
+                        StatusCadastroVenda = s.StatusCadastroVenda,
+                        ValidacaoIccid = s.ValidacaoIccid,
+                        DataAtualizacao = s.DataAtualizacao,
+                        VendaId = s.VendaId                        
+                    }).ToList()
+                })
+                .ToList();
             }
             catch (Exception e)
             {
@@ -72,7 +128,43 @@ namespace BackEnd_NET6.Services
             {
                 return _context.Vendas
                                .Where(v => v.NomeCliente.Contains(nome))
-                               .ToList();
+                               .Include(v => v.Status)
+                               .Select(v => new Venda
+                {
+                    Id = v.Id,
+                    NomeCliente = v.NomeCliente,
+                    Email = v.Email,
+                    Telefone = v.Telefone,
+                    IsWhatsApp = v.IsWhatsApp,
+                    CPF = v.CPF,
+                    RG = v.RG,
+                    DataNascimento = v.DataNascimento,
+                    CEP = v.CEP,
+                    Endereco = v.Endereco,
+                    Numero = v.Numero,
+                    Complemento = v.Complemento,
+                    DataVencimento = v.DataVencimento,
+                    DataVenda = v.DataVenda,
+                    Pdv = v.Pdv,
+                    IccidInicial = v.IccidInicial,
+                    VendedorId = v.VendedorId,
+                    Vendedor = v.Vendedor,
+                    Plano = v.Plano,                    
+                    PlanoId = v.PlanoId,
+                    Status = v.Status.Select(s => new VendaStatus
+                    {
+                        Id = s.Id,
+                        Mensagem = s.Mensagem,
+                        StatusCadastroCliente = s.StatusCadastroCliente,
+                        StatusValidacaoCpf = s.StatusValidacaoCpf,
+                        StatusCpfJaCliente = s.StatusCpfJaCliente,
+                        StatusCadastroVenda = s.StatusCadastroVenda,
+                        ValidacaoIccid = s.ValidacaoIccid,
+                        DataAtualizacao = s.DataAtualizacao,
+                        VendaId = s.VendaId                        
+                    }).ToList()
+                })
+                .ToList();
             }
             catch (Exception e)
             {
@@ -82,14 +174,59 @@ namespace BackEnd_NET6.Services
 
         public Venda PesquisarVendaPorId(int id)
         {
-            if (id <= 0 || id == null)
+            if (id <= 0)
             {
                 return null;
             }
+            
             try
             {
-                return _context.Vendas
+                var response = _context.Vendas
+                                 .Include(v => v.Status)
+                                 .Select(v => new Venda
+                {
+                    Id = v.Id,
+                    NomeCliente = v.NomeCliente,
+                    Email = v.Email,
+                    Telefone = v.Telefone,
+                    IsWhatsApp = v.IsWhatsApp,
+                    CPF = v.CPF,
+                    RG = v.RG,
+                    DataNascimento = v.DataNascimento,
+
+                    CEP = v.CEP,
+                    Endereco = v.Endereco,
+                    Numero = v.Numero,
+                    Complemento = v.Complemento,
+                    DataVencimento = v.DataVencimento,
+                    DataVenda = v.DataVenda,
+                    Pdv = v.Pdv,
+                    IccidInicial = v.IccidInicial,
+                    VendedorId = v.VendedorId,
+                    Vendedor = v.Vendedor,
+                    Plano = v.Plano,
+                    PlanoId = v.PlanoId,
+                    Status = v.Status.Select(s => new VendaStatus
+                    {
+                        Id = s.Id,
+                        Mensagem = s.Mensagem,
+                        StatusCadastroCliente = s.StatusCadastroCliente,
+                        StatusValidacaoCpf = s.StatusValidacaoCpf,
+                        StatusCpfJaCliente = s.StatusCpfJaCliente,
+                        StatusCadastroVenda = s.StatusCadastroVenda,
+                        ValidacaoIccid = s.ValidacaoIccid,
+                        DataAtualizacao = s.DataAtualizacao,
+                        VendaId = s.VendaId
+                    }).ToList()
+                                 })
                                .FirstOrDefault(v => v.Id == id);
+
+                if (response == null)
+                {
+                    return null;
+                }
+
+                return response;
             }
             catch (Exception e)
             {
@@ -102,17 +239,25 @@ namespace BackEnd_NET6.Services
             if (string.IsNullOrEmpty(cpf))
             {
                 return null;
-            }
+            }            
 
             try
-            {
-                return _context.Vendas
+            {                
+                var response = _context.Vendas
                                .FirstOrDefault(v => v.CPF == cpf);
+                if (response == null)
+                {
+                    return null;
+                }
+                return response;
+                
             }
             catch (Exception e)
             {
                 throw new Exception("Erro ao pesquisar venda por CPF: " + e.Message);
-            }            
+            }
+            
+
         }
                 
         public Venda PesquisarVendaPorTelefone(string telefone)
@@ -123,8 +268,15 @@ namespace BackEnd_NET6.Services
             }
             try
             {
-                return _context.Vendas
+                var response = _context.Vendas
                                .FirstOrDefault(v => v.Telefone == telefone);
+
+                if (response == null)
+                {
+                    return null;
+                }
+
+                return response;
             }
             catch (Exception e)
             {
@@ -165,48 +317,19 @@ namespace BackEnd_NET6.Services
             }
         }
 
-        public void AtualizarStatusVenda(int id, StatusVenda status)
-        {                        
-            if (id <= 0)
-            {
-                throw new Exception("Id inválido");
-            }
-
-            if (string.IsNullOrEmpty(status.ToString()))
-            {
-                throw new Exception("Status inválido");
-            }
-        
-            if (!Enum.IsDefined(typeof(StatusVenda), status))
-            {
-                throw new Exception("Status inválido");
-            }
-
+        public List<Venda> ListarVendasNaFila()
+        {
             try
             {
-                var venda = _context.Vendas.FirstOrDefault(v => v.Id == id);
-
-                if (venda == null)
-                {
-                    throw new Exception("Venda não encontrada");
-                }
-
-                venda.Status = status;
-
-                _context.Vendas.Update(venda);
-                _context.SaveChanges();
+                return _context.Vendas
+                               .Where(v => v.Status.Any(s => s.Status == "Na fila"))
+                               .Include(v => v.Status)
+                               .ToList();
             }
             catch (Exception e)
             {
-                throw new Exception("Erro ao atualizar status da venda: " + e.Message);
-            }                        
+                throw new Exception("Erro ao listar vendas na fila: " + e.Message);
+            }   
         }
-
-        public List<Venda> ListarVendasNaFila()
-        {
-            return _context.Vendas
-                            .Where(v => v.Status == 0)
-                            .ToList();                                                                                        
-        }
-    }        
+    }               
 }

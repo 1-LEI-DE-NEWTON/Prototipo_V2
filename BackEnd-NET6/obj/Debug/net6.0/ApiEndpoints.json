@@ -39,8 +39,8 @@
         "IsRequired": true
       },
       {
-        "Name": "status",
-        "Type": "BackEnd_NET6.Models.StatusVenda",
+        "Name": "vendaStatusDTO",
+        "Type": "BackEnd_NET6.Models.DTOs.VendaStatusDTO",
         "IsRequired": true
       }
     ],
@@ -99,6 +99,22 @@
       {
         "Name": "nome",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.VendasController",
+    "Method": "SearchStatusVendaByVendaId",
+    "RelativePath": "api/search/statusvenda/{vendaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vendaId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

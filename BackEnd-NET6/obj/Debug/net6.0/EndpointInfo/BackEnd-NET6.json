@@ -80,17 +80,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/StatusVenda"
+                "$ref": "#/components/schemas/VendaStatusDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/StatusVenda"
+                "$ref": "#/components/schemas/VendaStatusDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/StatusVenda"
+                "$ref": "#/components/schemas/VendaStatusDTO"
               }
             }
           }
@@ -256,6 +256,29 @@
         }
       }
     },
+    "/api/search/statusvenda/{vendaId}": {
+      "get": {
+        "tags": [
+          "Vendas"
+        ],
+        "parameters": [
+          {
+            "name": "vendaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/vendas/atualizar/{id}": {
       "put": {
         "tags": [
@@ -327,16 +350,6 @@
         },
         "additionalProperties": false
       },
-      "StatusVenda": {
-        "enum": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
       "VendaDTO": {
         "type": "object",
         "properties": {
@@ -406,6 +419,40 @@
           "planoId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VendaStatusDTO": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "mensagem": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCadastroCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusValidacaoCpf": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCpfJaCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCadastroVenda": {
+            "type": "string",
+            "nullable": true
+          },
+          "validacaoIccid": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

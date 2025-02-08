@@ -14,12 +14,14 @@ namespace BackEnd_NET6.Controllers
         private readonly I_Venda_Service _vendaService;
 
         private readonly I_Validar_CPF_Service _validar_CPF_Service;
+        private readonly I_VendaStatus_Service _vendaStatusService;
 
-        public VendasController(I_Venda_Service vendaService, I_Validar_CPF_Service validar_CPF_Service)
+        public VendasController(I_Venda_Service vendaService, I_Validar_CPF_Service validar_CPF_Service, I_VendaStatus_Service vendaStatusService)
         {
             _vendaService = vendaService;
             _validar_CPF_Service = validar_CPF_Service;
-        }        
+            _vendaStatusService = vendaStatusService;
+        }
 
         [HttpPost]
 
@@ -65,6 +67,7 @@ namespace BackEnd_NET6.Controllers
                 }
             }
         }
+        #region Get
 
         [HttpGet]
 
@@ -148,6 +151,16 @@ namespace BackEnd_NET6.Controllers
         {
             return Ok(_vendaService.PesquisarVendaPorId(id));
         }
+        
+        [HttpGet]
+        
+        [Route("api/search/statusvenda/{vendaId}")]
+        public IActionResult SearchStatusVendaByVendaId(int vendaId)
+        {
+            return Ok(_vendaStatusService.SearchByVendaId(vendaId));                        
+        }
+        
+        #endregion
 
         [HttpPut]
 
@@ -163,6 +176,13 @@ namespace BackEnd_NET6.Controllers
             string.IsNullOrEmpty(vendaDTO.CEP) ||
             string.IsNullOrEmpty(vendaDTO.Endereco) ||
             string.IsNullOrEmpty(vendaDTO.Numero) ||
+            string.IsNullOrEmpty(vendaDTO.Pdv) ||
+            string.IsNullOrEmpty(vendaDTO.IsWhatsApp.ToString()) ||
+            string.IsNullOrEmpty(vendaDTO.DataNascimento.ToString()) ||
+            string.IsNullOrEmpty(vendaDTO.DataVencimento.ToString()) ||
+            string.IsNullOrEmpty(vendaDTO.IccidInicial.ToString()) ||            
+            string.IsNullOrEmpty(vendaDTO.PlanoId.ToString()) ||
+            string.IsNullOrEmpty(vendaDTO.VendedorId.ToString()) ||                       
             string.IsNullOrEmpty(vendaDTO.Complemento))
             {
                 return BadRequest("Todos os campos são obrigatórios");

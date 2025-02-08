@@ -13,6 +13,7 @@ namespace BackEnd_NET6.Data
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Vendedor> Vendedores { get; set; }
         public DbSet<Plano> Planos { get; set; }
+        public DbSet<VendaStatus> VendaStatus { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,6 +28,12 @@ namespace BackEnd_NET6.Data
                 .WithMany(v => v.Vendas)
                 .HasForeignKey(v => v.PlanoId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Venda>()
+                .HasMany(v => v.Status)
+                .WithOne(s => s.Venda)
+                .HasForeignKey(s => s.VendaId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             base.OnModelCreating(modelBuilder);
         }

@@ -3,6 +3,7 @@ using System;
 using BackEnd_NET6.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackEnd_NET6.Migrations
 {
     [DbContext(typeof(VendaContext))]
-    partial class VendaContextModelSnapshot : ModelSnapshot
+    [Migration("20250208142102_StatusVenda")]
+    partial class StatusVenda
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -44,6 +44,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddScoped<I_JWT_Service, JWT_Service>();
 builder.Services.AddScoped<I_Venda_Service, Venda_service>();
 builder.Services.AddScoped<I_Validar_CPF_Service, Validar_CPF_Service>();
+builder.Services.AddScoped<I_VendaStatus_Service, VendaStatus_Service>();
 
 
 builder.Services.AddSwaggerGen(c =>

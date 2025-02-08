@@ -26,14 +26,6 @@ namespace BackEnd_NET6.Models
         public int PlanoId { get; set; }
         public Plano Plano { get; set; }
         public string Pdv { get; set; }                
-        public StatusVenda Status { get; set; }
-    }
-
-    public enum StatusVenda
-    {
-        Aguardando = 0,
-        Concluída = 1,
-        EmProcessamento = 2,
-        Error = 3
+        public List<VendaStatus> Status { get; set; }
     }
 }
