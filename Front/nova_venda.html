@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Venda</title>
+    <link rel="stylesheet" href="styles/nova_venda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilo do container do toggle switch */
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-label {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .toggle-input {
+            display: none;
+        }
+
+        .toggle-slider {
+            position: relative;
+            width: 40px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-slider::before {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background-color: white;
+            border-radius: 50%;
+            top: 1px;
+            left: 1px;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-input:checked + .toggle-slider {
+            background-color: #4CAF50;
+        }
+
+        .toggle-input:checked + .toggle-slider::before {
+            transform: translateX(20px);
+        }
+
+        /* Ajustando layout para input e toggle na mesma linha */
+        .form-group-inline {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    </style>    
+</head>
+<body>
+    <div class="container">
+        <h1>Nova Venda</h1>
+
+        <!-- Formulário de Venda -->
+        <form id="nova-venda-form">
+            <div class="form-group">
+                <label for="nome_cliente">Nome Cliente</label>
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nome_cliente" name="nome_cliente" class="form-control" placeholder="Digite o nome do cliente" required>
+                </div>
+            </div>
+            
+            <!-- Campo Telefone com Toggle -->
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <div class="input-container">
+                        <i class="fas fa-phone"></i>
+                        <input type="text" id="telefone" name="telefone" class="form-control" placeholder="Digite o telefone" required>
+                    </div>                    
+                </div>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="is-whatsapp" name="is-whatsapp" class="toggle-input">
+                    <label for="is-whatsapp" class="toggle-slider"></label>
+                    <label for="is-whatsapp" class="toggle-label">É WhatsApp?</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-container">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite o email" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <div class="input-container">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="Digite o CPF" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="rg">RG</label>
+                <div class="input-container">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="rg" name="rg" class="form-control" placeholder="Digite o RG" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="data_nascimento">Data de Nascimento</label>
+                <div class="input-container">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="date" id="data_nascimento" name="data_nascimento" class="form-control" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <div class="input-container">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" id="cep" name="cep" class="form-control" placeholder="Digite o CEP" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <div class="input-container">
+                    <i class="fas fa-home"></i>
+                    <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Digite o endereço" required>
+                </div>
+            </div>
+                    
+            <div class="form-group input-row">
+                <div class="input-container">
+                    <input type="text" id="numero" name="numero" class="form-control" placeholder="Número" required>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="complemento" name="complemento" class="form-control" placeholder="Complemento" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="data_vencimento">Dia de Vencimento</label>
+                <div class="input-container">
+                    <i class="fas fa-calendar-day"></i>
+                    <input type="number" id="data_vencimento" name="data_vencimento" class="form-control" placeholder="Digite o dia de vencimento" min="1" max="31" required>
+                </div>
+            </div>
+                        
+                        <div class="form-group">
+                            <label for="iccid">ICCID</label>
+                            <div class="input-container">
+                                <i class="fas fa-sim-card"></i>
+                                <input type="text" id="iccid" name="iccid" class="form-control" placeholder="Digite o ICCID" pattern="\d*" required>
+                            </div>
+                        </div>
+                                    
+                        <div class="form-group">
+                            <label for="nome_vendedor">Nome do Vendedor</label>
+                            <div class="input-container">
+                                <i class="fas fa-user-tie"></i>
+                                <select id="nome_vendedor" name="nome_vendedor" class="form-control" required>
+                                    <option value="">Selecione o vendedor</option>                                    
+                                </select>
+                            </div>
+                        </div>
+                                    
+                        <div class="form-group">
+                            <label for="plano">Plano</label>
+                            <div class="input-container">
+                                <i class="fas fa-file-alt"></i>
+                                <select id="plano" name="plano" class="form-control" required>
+                                    <option value="">Selecione o plano</option>
+                                </select>
+                            </div>
+                        </div>
+            
+            <div class="form-group">
+                <button type="submit" class="btn-concluir">Concluir Venda</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts/api.js"></script>
+    <script defer src="scripts/nova_venda.js"></script>
+</body>
+</html>

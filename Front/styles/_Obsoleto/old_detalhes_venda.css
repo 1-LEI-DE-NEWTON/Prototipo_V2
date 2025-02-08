@@ -1,0 +1,89 @@
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container principal */
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Botão Editar no topo */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.btn-editar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-editar:hover {
+    background-color: #0056b3;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilizando os campos somente-leitura */
+.details-container .form-group {
+    margin-bottom: 15px;
+}
+
+.details-container label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.details-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #666;
+    background-color: #f9f9f9;
+    pointer-events: none; /* Garante que o campo seja somente leitura */
+}
+
+/* Flexbox para os campos "Número" e "Complemento" lado a lado */
+.details-container .input-row {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os campos */
+    margin-bottom: 15px;
+}
+
+.input-row .form-group {
+    flex: 1; /* Faz com que os campos dividam o espaço igualmente */
+    margin-bottom: 0; /* Remove o espaçamento inferior desnecessário */
+}
+
+.input-row .form-group input {
+    width: 100%; /* Garante que os campos ocupem todo o espaço do flex */
+}

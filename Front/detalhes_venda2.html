@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Venda</title>
+    <link rel="stylesheet" href="styles/detalhes_venda2.css">
+    <script defer src="scripts/detalhes_venda2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <div class="header">
+                <h1>Detalhes da Venda</h1>
+                <div class="menu-container">
+                    <button class="menu-button" onclick="toggleMenu()">⋮</button>
+                    <div id="menu-dropdown" class="menu-dropdown hidden">
+                        <button class="menu-option" onclick="editarEnvio()">✏️ Editar Envio</button>
+                        <button class="menu-option" onclick="cancelarEnvio()">❌ Cancelar Envio</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Necessário incluir texto simples informando o cliente selecionado -->
+         
+
+        <!-- Tópico 1: Cadastro de Cliente -->
+        <div class="topic">
+            <div class="topic-header" onclick="toggleExpand('cadastroCliente')">
+                <span>Cadastro de Cliente</span>
+                <span class="status geral success" id="status-cadastroCliente">✔️ Concluído</span>
+            </div>
+            <div class="topic-content" id="cadastroCliente">
+                <div class="subtopic">
+                    <span>Validação de CPF</span>
+                    <button class="status clickable" id="status-validacaoCPF" onclick="showDetails('validacaoCPF')">
+                        ✔️ Sucesso
+                    </button>
+                </div>
+                <div class="subtopic">
+                    <span>CPF Já Cliente</span>
+                    <button class="status clickable error" id="status-cpfJaCliente" onclick="showDetails('cpfJaCliente')">
+                        ❌ Erro
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tópico 2: Cadastro de Venda -->
+        <div class="topic">
+            <div class="topic-header" onclick="toggleExpand('cadastroVenda')">
+                <span>Cadastro de Venda</span>
+                <span class="status geral in-progress" id="status-cadastroVenda">🔄 Em andamento</span>
+            </div>
+            <div class="topic-content" id="cadastroVenda">
+                <div class="subtopic">
+                    <span>Validação de ICCID</span>
+                    <button class="status clickable" id="status-validacaoICCID" onclick="showDetails('validacaoICCID')">
+                        🔄 Em andamento
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal" class="modal hidden" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span id="modal-close" class="close" onclick="closeModal(event)">&times;</span>
+            <h2>Detalhes do Status</h2>
+            <p id="modal-text">Informações sobre o status...</p>
+        </div>
+    </div>
+</body>
+</html>

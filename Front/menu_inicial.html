@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="styles/menu_inicial.css">
+</head>
+<body>
+    <div class="menu-container">
+        <!-- Título da Página -->
+        <h1>Menu Principal</h1>
+
+        <!-- Botões de Navegação -->
+        <div class="menu-buttons">
+            <button class="menu-btn" onclick="navigateTo('historico_vendas.html')">Histórico de Vendas</button>
+            <button class="menu-btn" onclick="navigateTo('nova_venda.html')">Nova Venda</button>
+        </div>
+    </div>
+
+    <script>        
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

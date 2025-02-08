@@ -1,0 +1,196 @@
+[
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "BackEnd_NET6.Models.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.PlanosController",
+    "Method": "GetVendedores",
+    "RelativePath": "api/planos/listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.RpaController",
+    "Method": "AtualizarStatusVenda",
+    "RelativePath": "api/rpa/atualizar-status-venda/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "BackEnd_NET6.Models.StatusVenda",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.RpaController",
+    "Method": "ObterFilaVendas",
+    "RelativePath": "api/rpa/obter-fila-vendas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.VendasController",
+    "Method": "PesquisarVendaPorCPF",
+    "RelativePath": "api/search/cpf/{cpf}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cpf",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.VendasController",
+    "Method": "PesquisarVendaPorId",
+    "RelativePath": "api/search/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.VendasController",
+    "Method": "PesquisarVendasPorNome",
+    "RelativePath": "api/search/nome/{nome}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.VendasController",
+    "Method": "PesquisarVendaPorTelefone",
+    "RelativePath": "api/search/telefone/{telefone}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "telefone",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.VendasController",
+    "Method": "ListarVendas",
+    "RelativePath": "api/servicos/listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.VendasController",
+    "Method": "ValidarCPF",
+    "RelativePath": "api/validate/cpf/{cpf}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cpf",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.VendasController",
+    "Method": "AdicionarVenda",
+    "RelativePath": "api/vendas/adicionar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vendaDTO",
+        "Type": "BackEnd_NET6.Models.DTOs.VendaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.VendasController",
+    "Method": "AtualizarVenda",
+    "RelativePath": "api/vendas/atualizar/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "vendaDTO",
+        "Type": "BackEnd_NET6.Models.DTOs.VendaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackEnd_NET6.Controllers.VendedoresController",
+    "Method": "GetVendedores",
+    "RelativePath": "api/vendedores/listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

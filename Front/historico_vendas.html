@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Vendas</title>
+    <link rel="stylesheet" href="styles/historico_vendas.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Título da Página -->
+        <h1>Histórico de Vendas</h1>
+
+        <!-- Barra de Pesquisa -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Pesquisar por Nome ou CPF">
+            <button id="search-btn">Pesquisar</button>
+        </div>
+
+        <!-- Lista de Vendas -->
+        <div id="historico-container" class="sales-list">                                    
+        </div>
+    </div>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/historico_vendas.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Bem-vindo!</h1>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Nome de usuário ou e-mail:</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu usuário ou e-mail" required>
+            </div>
+            <div class="input-group password-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <i class="toggle-password" onclick="togglePassword()">👁️</i>
+            </div>
+            <div class="footer">
+                <button type="submit">Entrar</button>
+                <a href="/forgot-password" class="forgot-password">Esqueceu a senha?</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const passwordIcon = document.querySelector(".toggle-password");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                passwordIcon.textContent = "🙈"; 
+            } else {
+                passwordField.type = "password";
+                passwordIcon.textContent = "👁️";
+            }
+        }
+    </script>
+   
+    <script src = "scripts/api.js"></script>
+    <script src="scripts/login.js"></script>
+</body>
+</html>

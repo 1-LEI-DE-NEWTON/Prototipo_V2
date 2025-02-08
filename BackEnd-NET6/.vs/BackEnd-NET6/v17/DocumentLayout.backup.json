@@ -1,0 +1,129 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|c:\\users\\dell\\onedrive\\estudos\\ti\\programa\u00E7\u00E3o\\c\u00F3digos\\prot\u00F3tipov1\\backend-net6\\services\\venda_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|solutionrelative:services\\venda_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|c:\\users\\dell\\onedrive\\estudos\\ti\\programa\u00E7\u00E3o\\c\u00F3digos\\prot\u00F3tipov1\\backend-net6\\data\\vendacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|solutionrelative:data\\vendacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|c:\\users\\dell\\onedrive\\estudos\\ti\\programa\u00E7\u00E3o\\c\u00F3digos\\prot\u00F3tipov1\\backend-net6\\models\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|solutionrelative:models\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|c:\\users\\dell\\onedrive\\estudos\\ti\\programa\u00E7\u00E3o\\c\u00F3digos\\prot\u00F3tipov1\\backend-net6\\models\\dtos\\vendadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|solutionrelative:models\\dtos\\vendadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|c:\\users\\dell\\onedrive\\estudos\\ti\\programa\u00E7\u00E3o\\c\u00F3digos\\prot\u00F3tipov1\\backend-net6\\controllers\\vendascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|solutionrelative:controllers\\vendascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|c:\\users\\dell\\onedrive\\estudos\\ti\\programa\u00E7\u00E3o\\c\u00F3digos\\prot\u00F3tipov1\\backend-net6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98CC6A17-3809-403F-AA82-16C11DF98000}|BackEnd-NET6.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Venda_service.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Services\\Venda_service.cs",
+              "RelativeDocumentMoniker": "Services\\Venda_service.cs",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Services\\Venda_service.cs",
+              "RelativeToolTip": "Services\\Venda_service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T22:32:24.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VendaContext.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Data\\VendaContext.cs",
+              "RelativeDocumentMoniker": "Data\\VendaContext.cs",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Data\\VendaContext.cs",
+              "RelativeToolTip": "Data\\VendaContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T22:34:16.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VendaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Models\\DTOs\\VendaDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\VendaDTO.cs",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Models\\DTOs\\VendaDTO.cs",
+              "RelativeToolTip": "Models\\DTOs\\VendaDTO.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA5wBIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T03:05:04.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAIwGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T22:58:48.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Venda.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Models\\Venda.cs",
+              "RelativeDocumentMoniker": "Models\\Venda.cs",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Models\\Venda.cs",
+              "RelativeToolTip": "Models\\Venda.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowBYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T22:34:32.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VendasController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Controllers\\VendasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VendasController.cs",
+              "ToolTip": "C:\\Users\\dell\\OneDrive\\Estudos\\TI\\Programa\u00E7\u00E3o\\C\u00F3digos\\Prot\u00F3tipoV1\\BackEnd-NET6\\Controllers\\VendasController.cs",
+              "RelativeToolTip": "Controllers\\VendasController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAArwDgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T23:47:04.596Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
