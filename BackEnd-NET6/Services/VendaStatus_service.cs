@@ -47,7 +47,7 @@ namespace BackEnd_NET6.Services
                 throw new Exception("Id inválido");
             }
 
-            var vendaStatus = _context.VendaStatus.FirstOrDefault(v => v.Id == id);
+            var vendaStatus = _context.VendaStatus.FirstOrDefault(v => v.VendaId == id);
 
             if (vendaStatus == null)
             {

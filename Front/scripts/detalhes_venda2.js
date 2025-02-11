@@ -32,34 +32,42 @@ function closeModal(event) {
     event.stopPropagation();
 }
 
-// Polling function to get status updates from the API
+// Polling function
 function pollStatus(vendaId) {
     setInterval(async () => {
         try {
-            const response = await fetch(`/api/vendas/${vendaId}/status`);
-            const data = await response.json();
-
-            // Update the status elements
+            const data = await apiRequest(`search/statusvenda/${vendaId}`);                        
+            console.log(data);
+            
             updateStatus("status-cadastroCliente", data.statusCadastroCliente, data.statusClassCadastroCliente);
-            updateStatus("status-validacaoCPF", data.statusValidacaoCPF, data.statusClassValidacaoCPF);
+            updateStatus("status-validacaoCPF", data.statusValidacaoCpf, data.statusClassValidacaoCPF);
             updateStatus("status-cpfJaCliente", data.statusCpfJaCliente, data.statusClassCpfJaCliente);
             updateStatus("status-cadastroVenda", data.statusCadastroVenda, data.statusClassCadastroVenda);
-            updateStatus("status-validacaoICCID", data.statusValidacaoICCID, data.statusClassValidacaoICCID);
+            updateStatus("status-validacaoICCID", data.validacaoIccid, data.statusClassValidacaoICCID);
         } catch (error) {
             console.error("Erro ao buscar status da venda:", error);
         }
-    }, 5000); // Polling every 5 seconds
+    }, 1000); // 1000 = 1 segundo
 }
 
 // Atualiza o status do tópico ou subtópico
 function updateStatus(elementId, statusText, statusClass) {
+    console.log(`Atualizando ${elementId} para ${statusText} (${statusClass})`);
     const element = document.getElementById(elementId);
     element.textContent = statusText;
     element.className = `status ${statusClass}`;
 }
 
-// Iniciar o polling para a venda específica (substitua com o ID real da venda)
-pollStatus('12345');  // Exemplo de ID da venda
+// Iniciar o polling quando a página for carregada
+document.addEventListener("DOMContentLoaded", async () => {
+    const params = new URLSearchParams(window.location.search);
+    const vendaId = params.get("id");
+    if (vendaId) {
+        pollStatus(vendaId);
+    } else {
+        console.error("ID da venda não encontrado na URL.");
+    }
+});
 
 
 

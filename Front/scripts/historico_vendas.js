@@ -72,5 +72,5 @@ function renderVendas(vendas) {
 }
 
 function verDetalhes(id) {
-    window.location.href = `detalhes_venda.html?id=${id}`;
+    window.location.href = `detalhes_venda2.html?id=${id}`;
 }
