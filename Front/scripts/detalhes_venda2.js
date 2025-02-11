@@ -25,7 +25,6 @@ function showDetails(statusId) {
     modal.classList.remove("hidden");
 }
 
-// Fecha o modal
 function closeModal(event) {
     const modal = document.getElementById("modal");
     modal.classList.add("hidden");
@@ -39,23 +38,39 @@ function pollStatus(vendaId) {
             const data = await apiRequest(`search/statusvenda/${vendaId}`);                        
             console.log(data);
             
-            updateStatus("status-cadastroCliente", data.statusCadastroCliente, data.statusClassCadastroCliente);
-            updateStatus("status-validacaoCPF", data.statusValidacaoCpf, data.statusClassValidacaoCPF);
-            updateStatus("status-cpfJaCliente", data.statusCpfJaCliente, data.statusClassCpfJaCliente);
-            updateStatus("status-cadastroVenda", data.statusCadastroVenda, data.statusClassCadastroVenda);
-            updateStatus("status-validacaoICCID", data.validacaoIccid, data.statusClassValidacaoICCID);
+            updateStatus("status-cadastroCliente", data.statusCadastroCliente);
+            updateStatus("status-validacaoCPF", data.statusValidacaoCpf);
+            updateStatus("status-cpfJaCliente", data.statusCpfJaCliente);
+            updateStatus("status-cadastroVenda", data.statusCadastroVenda);
+            updateStatus("status-validacaoICCID", data.validacaoIccid);
         } catch (error) {
             console.error("Erro ao buscar status da venda:", error);
         }
     }, 1000); // 1000 = 1 segundo
 }
 
-// Atualiza o status do tópico ou subtópico
-function updateStatus(elementId, statusText, statusClass) {
-    console.log(`Atualizando ${elementId} para ${statusText} (${statusClass})`);
+function updateStatus(elementId, statusText) {
+    console.log(`Atualizando ${elementId} para ${statusText}`);
     const element = document.getElementById(elementId);
-    element.textContent = statusText;
-    element.className = `status ${statusClass}`;
+    element.textContent = statusText;    
+
+    element.style.color = "black"
+
+    // Atualiza a cor de fundo com base no status
+    if (statusText === "Erro") {
+        element.style.backgroundColor = "red";
+    } else if (statusText === "Pendente") {
+        element.style.backgroundColor = "orange";
+    }
+    else if (statusText === "Concluído" || statusText === "Válido" || statusText === "OK") {
+        element.style.backgroundColor = "green";
+    }
+    else if (statusText === "Em andamento") {
+        element.style.backgroundColor = "blue";
+    }
+    else {
+        element.style.backgroundColor = "Gray";
+    }
 }
 
 // Iniciar o polling quando a página for carregada

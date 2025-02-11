@@ -30,19 +30,17 @@
         <div class="topic">
             <div class="topic-header" onclick="toggleExpand('cadastroCliente')">
                 <span>Cadastro de Cliente</span>
-                <span class="status geral success" id="status-cadastroCliente">✔️ Concluído</span>
+                <span class="status geral success" id="status-cadastroCliente"></span>
             </div>
             <div class="topic-content" id="cadastroCliente">
                 <div class="subtopic">
                     <span>Validação de CPF</span>
                     <button class="status clickable" id="status-validacaoCPF" onclick="showDetails('validacaoCPF')">
-                        ✔️ Sucesso
                     </button>
                 </div>
                 <div class="subtopic">
                     <span>CPF Já Cliente</span>
                     <button class="status clickable error" id="status-cpfJaCliente" onclick="showDetails('cpfJaCliente')">
-                        ❌ Erro
                     </button>
                 </div>
             </div>
@@ -52,13 +50,12 @@
         <div class="topic">
             <div class="topic-header" onclick="toggleExpand('cadastroVenda')">
                 <span>Cadastro de Venda</span>
-                <span class="status geral in-progress" id="status-cadastroVenda">🔄 Em andamento</span>
+                <span class="status geral in-progress" id="status-cadastroVenda"></span>
             </div>
             <div class="topic-content" id="cadastroVenda">
                 <div class="subtopic">
                     <span>Validação de ICCID</span>
                     <button class="status clickable" id="status-validacaoICCID" onclick="showDetails('validacaoICCID')">
-                        🔄 Em andamento
                     </button>
                 </div>
             </div>
