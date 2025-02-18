@@ -190,3 +190,4 @@ C:\Users\dell\OneDrive\Estudos\TI\Programação\Códigos\Prototipo_V2\BackEnd-NE
 C:\Users\dell\OneDrive\Estudos\TI\Programação\Códigos\Prototipo_V2\BackEnd-NET6\obj\Debug\net6.0\BackEnd-.2AECBF36.Up2Date
 C:\Users\dell\OneDrive\Estudos\TI\Programação\Códigos\Prototipo_V2\BackEnd-NET6\obj\Debug\net6.0\BackEnd-NET6.genruntimeconfig.cache
 C:\Users\dell\OneDrive\Estudos\TI\Programação\Códigos\Prototipo_V2\BackEnd-NET6\obj\Debug\net6.0\ref\BackEnd-NET6.dll
+C:\Users\dell\OneDrive\Estudos\TI\Programação\Códigos\Prototipo_V2\BackEnd-NET6\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt

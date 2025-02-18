@@ -91,7 +91,7 @@ document.getElementById("nova-venda-form").addEventListener("submit", async (eve
         cep: document.getElementById('cep').value,
         endereco: document.getElementById('endereco').value,
         numero: document.getElementById('numero').value,
-        complemento: document.getElementById('complemento').value,
+        complemento: document.getElementById('complemento').value || '',
         dataVencimento: document.getElementById('data_vencimento').value,
         iccidInicial: document.getElementById('iccid').value,
         planoId: selectedPlanoId,  
@@ -100,7 +100,7 @@ document.getElementById("nova-venda-form").addEventListener("submit", async (eve
     };
 
     // Validar os dados do formulário
-    if (Object.values(venda).some(value => value === "")) {
+    if (Object.values(venda).some(value => value === "" && value !== venda.complemento)) {
         alert("Preencha todos os campos!");
         return;
     }

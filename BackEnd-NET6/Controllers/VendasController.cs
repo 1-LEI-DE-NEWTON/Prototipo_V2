@@ -38,8 +38,7 @@ namespace BackEnd_NET6.Controllers
             string.IsNullOrEmpty(vendaDTO.CEP) ||
             string.IsNullOrEmpty(vendaDTO.Endereco) ||
             string.IsNullOrEmpty(vendaDTO.Numero) ||
-            string.IsNullOrEmpty(vendaDTO.Pdv) ||             
-            string.IsNullOrEmpty(vendaDTO.Complemento))
+            string.IsNullOrEmpty(vendaDTO.Pdv))
             {
                 return BadRequest("Todos os campos são obrigatórios");
             }            
@@ -182,8 +181,7 @@ namespace BackEnd_NET6.Controllers
             string.IsNullOrEmpty(vendaDTO.DataVencimento.ToString()) ||
             string.IsNullOrEmpty(vendaDTO.IccidInicial.ToString()) ||            
             string.IsNullOrEmpty(vendaDTO.PlanoId.ToString()) ||
-            string.IsNullOrEmpty(vendaDTO.VendedorId.ToString()) ||                       
-            string.IsNullOrEmpty(vendaDTO.Complemento))
+            string.IsNullOrEmpty(vendaDTO.VendedorId.ToString()))            
             {
                 return BadRequest("Todos os campos são obrigatórios");
             }
