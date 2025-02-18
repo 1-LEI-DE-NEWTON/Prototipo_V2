@@ -62,23 +62,20 @@ class RPAWorker:
             self.driver.implicitly_wait(10)
                         
             time.sleep(2)
-
             
-            
-            #CONSERTAR ABAIXO, RPA QUEBROU
-
-
-
-            self._preencher_campo(By.CSS_SELECTOR, '[aria-label="CPF"]', venda["cpf"])
+            self._preencher_campo(By.CSS_SELECTOR, '[formcontrolname="document"]', venda["cpf"])
                         
             #Clica em algum lugar fora da textbox para que o campo de CPF seja validado
-            self.driver.find_element(By.CSS_SELECTOR, 'body').click()
+            self.driver.find_element(By.CSS_SELECTOR, 'body').click() #ok
 
             time.sleep(3)
                         
             if self.screen_identifier.identificar_cpf_invalido():
                 logging.warning("CPF inválido.")
                 return            
+            
+            #CONSERTAR ABAIXO, RPA QUEBROU
+
         
             self.driver.find_element(By.CSS_SELECTOR, 'button.mat-raised-button.mat-primary').click()
 
