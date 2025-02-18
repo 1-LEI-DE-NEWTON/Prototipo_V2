@@ -34,6 +34,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             } catch (error) {
                 alert("Erro ao realizar pesquisa: " + error.message);
             }
+        } else {
+            try {
+                const vendas = await apiRequest("servicos/listar");
+                renderVendas(vendas);
+            } catch (error) {
+                alert("Erro ao carregar histórico: " + error.message);
+            }
         }
     });
 });
