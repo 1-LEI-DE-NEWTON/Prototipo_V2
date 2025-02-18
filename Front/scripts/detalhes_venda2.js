@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", async () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const vendaId = urlParams.get('id');
+
+    if (!vendaId) {
+        alert("ID da venda não encontrado.");
+        return;
+    }
+
+    try {
+        const venda = await apiRequest(`vendas/search/id/${vendaId}`);
+        console.log(venda);
+        document.getElementById('client-name').textContent = `Cliente: ${venda.nomeCliente}`;
+    } catch (error) {
+        alert("Erro ao carregar detalhes da venda: " + error.message);
+    }
+});
 
 // Expande ou recolhe o conteúdo do tópico
 function toggleExpand(topicId) {
