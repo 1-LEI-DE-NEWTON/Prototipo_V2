@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-        const venda = await apiRequest(`vendas/search/id/${vendaId}`);
+        const venda = await apiRequest(`search/id/${vendaId}`);
         console.log(venda);
         document.getElementById('client-name').textContent = `Cliente: ${venda.nomeCliente}`;
     } catch (error) {
